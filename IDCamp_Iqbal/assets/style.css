@@ -1,0 +1,517 @@
+:root{
+    --blue1 : #10316B;
+    --blue2 : #0B409C;
+    --white : #F2F7FF;
+    --yellow : #FFCE63;
+    --red: #B03052;
+    --black: #181C14;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    height: 200vh;
+    background-color: var(--black);
+}
+
+header{
+    background: linear-gradient(to bottom, #000 15%,var(--blue2));
+    margin: 0;
+    position: relative;
+}
+
+header svg{
+    position: absolute;
+    left: 0;
+    bottom: 0 !important;
+    width: 100%;
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    color: var(--white);
+    display: flex;
+    padding: 0 60px;
+    justify-content: space-evenly;
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    z-index: 999;
+    margin: 0;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--white);
+}
+
+nav .menu{
+    display: flex;
+    align-items: center;
+}
+
+nav .menu ul{
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+
+nav .menu ul li{
+    padding: 0 15px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+nav .menu ul li a{
+    text-decoration: none;
+    color: var(--white);
+    transition: ease-in 0.1s;
+}
+
+nav .menu a.active {
+    color: var(--yellow);
+    font-weight: 700;
+  }
+  
+nav .menu ul li a:hover{
+    transition: ease-in 0.1s;
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.jumbotron {
+    z-index: 1;
+    height: 70vh;
+    color: var(--white);
+    padding: 0 60px 60px 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.jumbotron{
+    .text{
+        width: 50%;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    span{
+        background: linear-gradient(-45deg, var(--white), var(--red), var(--yellow), var(--red), var(--white));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradientMove 3s linear infinite;
+        background-size: 200% 100%;
+    }
+    img{
+        position: relative;
+        max-width: 300px;
+        height: auto;
+        filter: drop-shadow(3px 3px 3px #0009);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+svg{
+    position: absolute;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+#gunpla{
+    display: flex;
+}
+
+#gunpla .content{
+    margin: 0 10px 0 50px;
+    padding: 10px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    flex-flow: column nowrap;
+    min-height: 500px;
+    z-index: 10;
+    border-radius: 24px;
+    background-color: #0006;
+    backdrop-filter: blur(8px);
+    box-shadow: 1px 1px 4px #000;
+}
+
+#gunpla h2, #gunpla em{
+    text-align: center;
+    color: var(--white);
+}
+
+#gunpla h2{
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 1.5rem;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+#gunpla em{
+    color: #fff8;
+    font-size: 0.9rem;
+}
+
+#gunpla p{
+    color: var(--white);
+    text-align: justify;
+}
+
+#gunpla ul{
+    color: var(--white);
+    padding-left: 20px;
+    list-style-type: disc ;
+}
+
+#gunpla .linkkoleksi{
+    color: var(--white);
+    text-decoration: 1px solid underline;
+    transition: ease-in 0.1s;
+}
+
+#gunpla .linkkoleksi:hover{
+    transition: ease-in 0.1s;
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+#gunpla aside{
+    margin: 0 50px 0 10px;
+    padding: 10px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    z-index: 10;
+    border-radius: 24px;
+    background-color: #0006;
+    backdrop-filter: blur(8px);
+    box-shadow: 1px 1px 4px #000;
+}
+
+aside .as-gunpla img{
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+aside .as-gunpla ul li a{
+    text-decoration: 1px solid underline;
+    color: var(--white);
+    transition: ease-in 0.1s;
+}
+
+aside .as-gunpla ul li a:hover{
+    padding-left: 5px;
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+aside .detail{
+    display: none;
+    height: auto;
+    flex-direction: column;
+    min-width: 400px;
+}
+
+aside .detail .back{
+    color: var(--white);
+}
+aside .detail .back:hover{
+    color: var(--red);
+    font-weight: 600;
+}
+
+aside .detail a:hover{
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#koleksiku{
+    margin-top: 100px;
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#koleksiku h1{
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+}
+
+#koleksiku .koleksi{
+    display: flex;
+    flex-direction: row;
+    color: var(--white);
+}
+
+.koleksi .button{
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+}
+
+.koleksi .buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1;
+}
+
+
+.koleksi .buttons .btn {
+    border: none;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    position: relative;
+    filter: grayscale(1);
+    background: linear-gradient(-45deg, var(--red), var(--yellow));
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    transition: 0.1s ease-in;
+    overflow: hidden;
+}
+
+.koleksi .buttons .btn::before {
+    content: '';
+    position: absolute;
+    inset: 2.5px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.1s ease-in;
+}
+
+.koleksi .buttons .btn#btn-1::before {
+    background-image: url(./images/calibarn-1.jpg);
+}
+
+.koleksi .buttons .btn#btn-2::before {
+    background-image: url(./images/strike-1.jpg);
+}
+
+.koleksi .buttons .btn#btn-3::before {
+    background-image: url(./images/ggg-1.jpg);
+}
+
+.koleksi .buttons .btn:hover {
+    filter: grayscale(0.5);
+    transform: scale(1.05);
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+
+.buttonActive {
+    transform: scale(1.1);
+    filter: grayscale(0) !important;
+}
+
+.content-koleksi{
+    width: 70vw;
+    height: 780px;
+    border-radius: 24px;
+    background-color: #0006;
+    backdrop-filter: blur(8px);
+    box-shadow: 1px 1px 4px #000;
+}
+
+.content-koleksi .koleksi-gunpla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-koleksi .deskripsi h2{
+    margin-bottom: 8px;
+}
+
+.content-koleksi .deskripsi{
+    padding: 20px;
+}
+
+.content-koleksi .deskripsi p{
+    font-size: 0.9rem;
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.content-koleksi .koleksi-gunpla .swiper{
+    height: 100%;
+}
+
+.content-koleksi .koleksi-gunpla .swiper img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px 24px 0 0 ;
+}
+
+.content-koleksi .koleksi-gunpla .swiper .swiper-button-prev,
+.content-koleksi .koleksi-gunpla .swiper .swiper-button-next{
+    color: var(--white);
+}
+
+.content-koleksi .koleksi-gunpla .swiper .swiper-slide img{
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16/9 !important;
+}
+
+.content-koleksi .koleksi-gunpla .swiper .swiper-pagination-bullet-active{
+    background: var(--white);
+}
+
+#strike, #ggg{
+    display: none;
+}
+
+.calibarn-2{
+    object-position: top !important;
+}
+
+footer{
+    background: linear-gradient(to top, var(--blue1) 5%,var(--blue2) 50%);
+    color: var(--white);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 1024px){
+    .jumbotron img{
+        max-width: 200px;
+    }
+    .content-koleksi .koleksi-gunpla .swiper .swiper-slide img{
+        height: 400px;
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #gunpla{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #gunpla .content{
+        margin: 0 10px 0 10px;
+    }
+    #gunpla aside{
+        margin: 10px;
+    }
+    .content-koleksi .koleksi-gunpla .swiper .swiper-slide img{
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media screen and (max-width: 680px){
+    * p, * ul, * em, * a{
+        font-size: 0.7rem !important;
+    }
+    * h2, * h1{
+        font-size: 1.1rem !important;
+    }
+
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .menu{
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .jumbotron{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        padding-top: 80px;
+        .text{
+            width: 90%;
+        }
+    }
+    .koleksi .button{
+        margin-right: 20px;
+    }
+    .koleksi .buttons .btn {
+        width: 65px;
+        height: 65px;
+    }
+    .content-koleksi .koleksi-gunpla .swiper .swiper-slide img{
+        height: 200px;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        object-position: center;
+    }
+    .content-koleksi{
+        height: auto;
+    }
+    .content-koleksi .koleksi-gunpla .swiper .swiper-button-prev,
+    .content-koleksi .koleksi-gunpla .swiper .swiper-button-next,
+    .content-koleksi .koleksi-gunpla .swiper .swiper-pagination{
+        scale: 0.5;
+    }
+}
